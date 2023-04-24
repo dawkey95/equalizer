@@ -2,26 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	@apply relative bg-white overflow-x-hidden;
+}
+
+main {
+	@apply relative text-dark flex min-h-screen flex-col items-center justify-between overflow-x-clip;
+}
+
+header {
+	@apply px-6 pt-10;
+}
+
+.mobileBG {
+	@apply z-[-9999] absolute top-[-150px] left-[70px] scale-150;
+}
+
+/* MAIN TEXT SECTION */
+
+.main-text-section {
+	@apply mt-16 px-6;
+}
+
+.main-text-title {
+	@apply text-[2.5rem] font-bold;
+}
+
+.main-text-content {
+	@apply text-[1rem] mt-5 leading-normal font-normal;
+}
+
+/* MIDDLE CONTAINER */
+.middle-container {
+	@apply relative pb-[11.25rem] rounded-xl bg-dark min-h-full min-w-full flex flex-col items-center justify-center mt-[10rem] mb-[24.375rem];
+}
+
+.phoneIMG {
+	@apply absolute scale-[60%] top-[-16rem];
+}
+
+.middle-content-container {
+	@apply absolute top-[420px] rounded-xl bg-orange text-left text-white px-9 pt-12;
+}
+
+.middle-content-title {
+	@apply text-[2.5rem] font-bold mb-3;
+}
+
+.middle-content-paragraph {
+	@apply text-[1.125rem];
+}
+
+.middle-cost-container {
+	@apply flex flex-row items-center gap-4;
+}
+
+.middle-content-monthly {
+	@apply text-[1.25rem] font-normal;
+}
+
+.middle-content-cost {
+	@apply text-[4rem] font-bold;
+}
+
+.btn-grp {
+	@apply flex flex-col mb-12;
+}
+
+.btn {
+	@apply py-4 mt-8 text-[1.125rem] font-bold flex flex-row justify-center items-center gap-2 rounded-xl;
+}
+
+.btn-1 {
+	@apply bg-dark text-white;
+}
+
+.btn-2 {
+	@apply bg-white text-dark;
+}
+
+/* FOOTER */
+
+footer {
+	@apply mx-6;
+}
+
+.footer-content {
+	@apply mt-8 text-[1rem] mb-[4rem] leading-relaxed;
+}
+
+.social-icons {
+	@apply flex flex-row gap-4 mb-20;
 }

@@ -3,46 +3,77 @@
 @tailwind utilities;
 
 body {
-	@apply relative bg-white overflow-x-hidden;
+	@apply relative bg-white;
 }
 
 main {
-	@apply relative text-dark flex min-h-screen flex-col items-center justify-between overflow-x-clip;
-}
-
-header {
-	@apply px-6 pt-10;
+	@apply relative text-dark flex min-h-screen flex-col items-center justify-between overflow-x-clip
+	md:mx-10;
 }
 
 .mobileBG {
-	@apply z-[-9999] absolute top-[-150px] left-[70px] scale-150;
+	@apply z-[-9999] absolute top-[-150px] left-[150px] scale-150 
+	md:hidden;
+}
+
+.tabletBG {
+	@apply z-[-9998] absolute hidden 
+	md:block 
+	xl:hidden;
+}
+
+.desktopBG {
+	@apply z-[-9997] absolute hidden 
+	xl:block;
+}
+
+/* HEADER */
+
+header {
+	@apply px-6 pt-10 
+	md:px-10 md:pt-14;
+}
+
+.bgPattern1 {
+	@apply absolute top-[-32px] right-[-45px] hidden 
+	md:block w-[266px] h-[400px];
 }
 
 /* MAIN TEXT SECTION */
 
 .main-text-section {
-	@apply mt-16 px-6;
+	@apply mt-16 mx-6 
+	md:mt-[5.9375rem] md:mr-[169px];
 }
 
 .main-text-title {
-	@apply text-[2.5rem] font-bold;
+	@apply text-[2.5rem] font-bold
+	md:text-[4rem] md:leading-none;
 }
 
 .main-text-content {
-	@apply text-[1rem] mt-5 leading-normal font-normal;
+	@apply text-[1rem] mt-5 leading-relaxed font-normal
+	md:text-[1.10rem] md:mt-7;
 }
 
 /* MIDDLE CONTAINER */
 .middle-container {
-	@apply relative pb-[11.25rem] rounded-xl bg-dark min-h-full min-w-full flex flex-col items-center justify-center mt-[10rem] mb-[24.375rem];
+	@apply relative pb-[14.25rem] rounded-xl bg-dark min-h-full min-w-full flex flex-col items-center justify-center mt-[13rem] mb-[24.375rem] 
+	md:rounded-xl md:mb-[12rem];
+}
+
+.bgPattern2 {
+	@apply w-[280px] h-[420px] md:relative md:left-[25px];
 }
 
 .phoneIMG {
-	@apply absolute scale-[60%] top-[-16rem];
+	@apply absolute top-[-7rem] w-[208px] h-[430px]
+	md:left-16 md:w-[265px] md:h-[550px];
 }
 
 .middle-content-container {
-	@apply absolute top-[420px] rounded-xl bg-orange text-left text-white px-9 pt-12;
+	@apply absolute top-[380px] rounded-xl bg-orange text-left text-white px-9 pt-12 
+	md:w-[399px] md:top-[175px] md:left-[239px];
 }
 
 .middle-content-title {
@@ -74,11 +105,11 @@ header {
 }
 
 .btn-1 {
-	@apply bg-dark text-white;
+	@apply bg-dark text-white hover:bg-teal;
 }
 
 .btn-2 {
-	@apply bg-white text-dark;
+	@apply bg-white text-dark hover:bg-yellow;
 }
 
 /* FOOTER */
@@ -93,4 +124,16 @@ footer {
 
 .social-icons {
 	@apply flex flex-row gap-4 mb-20;
+}
+
+.fb {
+	@apply hover:fill-orange;
+}
+
+.insta {
+	@apply hover:fill-orange;
+}
+
+.twitter {
+	@apply hover:fill-orange;
 }

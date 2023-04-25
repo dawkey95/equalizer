@@ -9,19 +9,25 @@ import { ImFacebook2 } from 'react-icons/im';
 
 // IMPORT IMAGES
 import logo from '../assets/logo.svg';
+import bgPattern1 from '../assets/bg-pattern-1.svg';
 import bgPattern2 from '../assets/bg-pattern-2.svg';
 import phoneIMG from '../assets/illustration-app.png';
 import mobileBG from '../assets/bg-main-mobile.png';
+import tabletBG from '../assets/bg-main-tablet.png';
+import desktopBG from '../assets/bg-main-desktop.png';
 
 export default function Home() {
 	return (
 		<>
 			<header>
 				<Image src={logo} priority alt='' />
+				<Image className='bgPattern1' src={bgPattern1} alt='' priority />
 			</header>
 
 			<main>
 				<Image className='mobileBG' src={mobileBG} alt='' />
+				<Image className='tabletBG' src={tabletBG} alt='' />
+				<Image className='desktopBG' src={desktopBG} alt='' />
 				<section className='main-text-section'>
 					<h1 className='main-text-title'>
 						We make your music sound extraordinary.
@@ -34,7 +40,7 @@ export default function Home() {
 				</section>
 
 				<div className='middle-container'>
-					<Image className='bgPattern1' src={bgPattern2} alt='' priority />
+					<Image className='bgPattern2' src={bgPattern2} alt='' priority />
 					<Image className='phoneIMG' src={phoneIMG} alt='' priority />
 
 					<div className='middle-content-container'>
@@ -71,9 +77,9 @@ export default function Home() {
 						<strong> equalizer@example.com</strong>
 					</p>
 					<div className='social-icons'>
-						<ImFacebook2 />
-						<BsInstagram />
-						<BsTwitter />
+						<ImFacebook2 className='fb' />
+						<BsInstagram className='insta' />
+						<BsTwitter className='twitter' />
 					</div>
 				</div>
 			</footer>

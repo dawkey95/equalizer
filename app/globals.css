@@ -35,15 +35,15 @@ header {
 }
 
 .bgPattern1 {
-	@apply absolute top-[-32px] right-[-45px] hidden 
-	md:block w-[266px] h-[400px];
+	@apply absolute top-[-32px] right-[-45px] hidden w-[266px] h-[400px]
+	md:block;
 }
 
 /* MAIN TEXT SECTION */
 
 .main-text-section {
 	@apply mt-16 mx-6 
-	md:mt-[5.9375rem] md:mr-[169px];
+	md:mt-[5.9375rem] md:mr-[169px] md:mx-0;
 }
 
 .main-text-title {
@@ -115,15 +115,24 @@ header {
 /* FOOTER */
 
 footer {
-	@apply mx-6;
+	@apply mx-6 mb-20;
+}
+
+.footer-copyright {
+	@apply text-[1rem] md:mt-8;
 }
 
 .footer-content {
-	@apply mt-8 text-[1rem] mb-[4rem] leading-relaxed;
+	@apply mt-8 text-[1rem] mb-[4rem] 
+	md:mt-0 md:mb-0 md:w-[366px];
+}
+
+.footer-container {
+	@apply grid grid-cols-1 md:flex md:flex-row md:justify-between md:gap-10;
 }
 
 .social-icons {
-	@apply flex flex-row gap-4 mb-20;
+	@apply flex flex-row gap-4 mb-20 md:my-8 md:mb-0 md:items-end md:pb-7;
 }
 
 .fb {

@@ -46,29 +46,11 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-	color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
-```
+This project although not heavy with JS was just good practice around HTML and CSS to create the landing apge. I also used this project to practice using Tailwind CSS and Next.js. I also used this project to practice using React Icons.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Going forward with future projects I want to continue learning NextJS 13.3 as well as getting more component with Tailwind CSS. I also want to focus on devling more into React with future prohects that will start to rely more on JS.
 
 ## Author
 

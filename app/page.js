@@ -70,13 +70,15 @@ export default function Home() {
 
 			<footer>
 				<div className='footer-container'>
-					<div>
-						<Image src={logo} priority alt='' />
-						<p className='footer-copyright'>All rights reserved © Equalizer 2021</p>
-						<p className='footer-content'>
-							Have any problems? Contact us via social media or email us at
-							<strong> equalizer@example.com</strong>
-						</p>
+					<div className='footer-content'>
+						<Image className='footer-logo' src={logo} priority alt='' />
+						<div className='footer-text'>
+							<p className='footer-copyright'>All rights reserved © Equalizer 2021</p>
+							<p className='footer-details'>
+								Have any problems? Contact us via social media or email us at{' '}
+								<strong>equalizer@example.com</strong>
+							</p>
+						</div>
 					</div>
 					<div className='social-icons'>
 						<ImFacebook2 className='fb' />
